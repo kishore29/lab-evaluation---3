@@ -1,0 +1,6 @@
+Datasource:Bookstore
+Template:c:\inetsrv\scripts\project3\order.htx
+SQLStatement:
++SELECT Title,Description,Comments,Special,Subject
++FROM Titles
++WHERE Title LIKE '%txtTitle%'
