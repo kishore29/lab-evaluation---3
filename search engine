@@ -8,3 +8,26 @@ SQLStatement:
 +WHERE Titles.Subject LIKE '%txtSubject%'
 +AND Titles.ISBN=[Title Author].ISBN
 +AND [Title Author].Au_ID=Authors.Au_ID
+
+DataSource:Bookstore
+Template:c:\inetsrv\scripts\project3\selected.htx 
+
+MaxRecords:21
+SQLStatement:
++SELECT Titles.Title,Titles.Description
++,Authors.Author,Titles.Price,Titles.Special
++FROM Titles,[Title Author],Authors
++WHERE Titles.Title LIKE '%txtTitle%'
++AND Titles.ISBN=[Title Author].ISBN
++AND [Title Author].Au_ID=Authors.Au_ID 
+
+DataSource:Bookstore
+Template:c:\inetsrv\scripts\project3\selected.htx
+MaxRecords:21
+SQLStatement:
++SELECT Titles.Title,Titles.Description
++,Authors.Author,Titles.Price,Titles.Special
++FROM Titles,[Title Author],Authors
++WHERE Authors.Author LIKE '%txtAuthor%'
++AND Authors.Au_ID=[Title Author].Au_ID
++AND [Title Author].ISBN=Titles.ISBN 
