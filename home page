@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<TITLE>Bookstore</TITLE>
+</HEAD> 
+<BODY BGCOLOR="WHITE" OnLoad="Page_Initialize">
+<CENTER>
+<BASEFONT FACE="ARIAL">
+<IMG SRC="banner.gif" ALT="Web Pages Bookstore"
+WIDTH=575 HEIGHT=130>
+<P>
+<BR> 
+<TABLE WIDTH=600>
+    <TR>
+        <TD>
+        <IMG SRC="search.gif" ALT="Search"
+        WIDTH=132 HEIGHT=34>
+        </TD>
+        <TD ALIGN="CENTER">
+        <IMG SRC="hotlist.gif" ALT="Hot List"
+        WIDTH=153 HEIGHT=48>
+        </TD>
+    </TR> 
+<TR>
+        <TD>
+        <FORM ACTION="/scripts/project3/subject.idc" 
+        METHOD="POST" NAME="frmSubject">
+        Subject<BR>
+        <INPUT TYPE="TEXT" NAME="txtSubject">
+        <INPUT TYPE="SUBMIT" VALUE="GO!">
+        </FORM>
+        <P>
+ 
+        <FORM ACTION="/scripts/project3/title.idc"
+        METHOD="POST" NAME="frmTitle">
+        Title<BR>
+        <INPUT TYPE="TEXT" NAME="txtTitle">
+        <INPUT TYPE="SUBMIT" VALUE="GO!">
+        </FORM>
+        <P> 
+        <FORM ACTION="/scripts/project3/author.idc"
+        METHOD="POST" NAME="frmAuthor">
+        Author<BR>
+        <INPUT TYPE="TEXT" NAME="txtAuthor">
+        <INPUT TYPE="SUBMIT" VALUE="GO!">
+        </FORM>
+        </TD> 
+<TD ALIGN="CENTER">
+        <IMG SRC="spike_re.gif" ALT="Picture">
+        <FONT FACE="ARIAL" SIZE=3>
+        <A HREF="/scripts/project3/title.idc?txtTitle=
+    Inside+Microsoft+Visual+Basic, +Scripting+Edition">
+        Inside Microsoft Visual Basic, Scripting Edition</A>
+        <P>Microsoft Press<P>
+        </FONT>
+        <FONT FACE="ARIAL" SIZE=2>
+        Get up to speed on Microsoft Visual Basic,<BR>
+        Scripting Edition, with this comprehensive book.<BR>
+        The book covers the VBScript language,<BR>
+        ActiveX controls, and the Microsoft Internet<BR>
+        Information Server.<BR>
+        A must-have for any Visual Basic for<BR>
+        Applications developer!!<BR>
+        Click for more information!
+        </FONT>
+        </TD>
+    </TR>
+</TABLE>
+</CENTER> 
+<FORM NAME="frmHelp">
+ 
+    <OBJECT
+    CLASSID="clsid:59CCB4A0-727D-11CF-AC36-00AA00A47DD2"
+    ID="tmrHelp"
+    WIDTH=39
+    HEIGHT=10
+    >
+    <PARAM NAME="Interval" VALUE="30000">
+    <PARAM NAME="Enabled" VALUE="True">
+    </OBJECT>
+ 
+    <OBJECT
+    CLASSID="clsid:59CCB4A0-727D-11CF-AC36-00AA00A47DD2"
+    ID="tmrDemo"
+    WIDTH=39
+    HEIGHT=10
+    >
+    <PARAM NAME="Interval" VALUE="1000">
+    <PARAM NAME="Enabled" VALUE="False">
+    </OBJECT>
+ 
+    <OBJECT
+    CLASSID="clsid:59CCB4A0-727D-11CF-AC36-00AA00A47DD2"
+    ID="tmrStatus" 
+    WIDTH=39
+    HEIGHT=10
+    >
+    <PARAM NAME="Interval" VALUE="200">
+    <PARAM NAME="Enabled" VALUE="False">
+    </OBJECT>
+</FORM> 
+<FONT FACE="ARIAL" SIZE=4 COLOR="BLUE">
+<MARQUEE>Check out our great Internet books!</MARQUEE>
+</FONT>
+</BODY>
+</html>
