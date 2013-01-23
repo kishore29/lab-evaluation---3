@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+<TITLE>Selected Titles</TITLE>
+</HEAD>
+<BODY BGCOLOR="WHITE">
+<BASEFONT FACE="ARIAL" SIZE=4>
+<CENTER>
+
+<IMG SRC="/project3/selected.gif" ALT="Selected Titles"
+WIDTH=390 HEIGHT=100> 
+<TABLE BORDER CELLPADDING=5>
+<TR>
+    <TH>
+    Title
+    </TH>
+    <TH>
+    Description
+    </TH>
+    <TH> 
+
+    Author
+    </TH>
+    <TH>
+    Price
+    </TH>
+</TR> 
+<%begindetail%>
+    <TR>
+        <TD>
+        <%If Special EQ "1"%>
+            <IMG SRC="/project3/special.gif"
+            HEIGHT=25 WIDTH=75><BR>
+        <%EndIf%>
+
+        <FONT SIZE=-2>
+        <B><%Title%></B><BR>
+
+        <FORM METHOD="POST"
+        ACTION="/scripts/project3/order.idc">
+        <INPUT TYPE="HIDDEN" VALUE="<%Title%>"
+        NAME="txtTitle">
+        <INPUT TYPE="SUBMIT" VALUE="Order Info...">
+        </FORM>
+
+        </FONT>
+        </TD>
+
+        <TD>
+        <FONT SIZE=-2>
+        <%Description%>
+        </FONT>
+        </TD> 
+        <TD>
+        <FONT SIZE=-2>
+        <%Author%><BR>
+
+        <FORM METHOD="POST"
+        ACTION="/scripts/project3/author.idc">
+        <INPUT TYPE="HIDDEN" VALUE="%<%Author%>%"
+        NAME="txtAuthor">
+        <INPUT TYPE="SUBMIT" VALUE="More...">
+        </FORM>
+
+        </FONT>
+        </TD>
+
+        <TD>
+        <FONT SIZE=-2>
+        <%Price%>
+
+
+        </FONT>
+        </TD>
+    </TR> 
+
+<INPUT TYPE="HIDDEN" VALUE="<%Title%>"
+<%If CurrentRecord EQ 20%>
+        <TR>
+            <TD COLSPAN=4>
+            <IMG SRC="/project3/toomany.gif"
+            ALT="Too Many Selections"
+            WIDTH=315 HEIGHT=90><P>
+            </TD>
+        </TR>
+        <TR>
+            <TD COLSPAN=4>
+            You have specified criteria that return information
+            on more than 20 books. You should be more specific
+            to narrow your search.
+            <P>
+            Here is an example of narrowing your selection:
+            <P>
+            <I>Title</I> = <FONT COLOR="GREEN">%V%</FONT>
+            returns information on all books with the letter "V"
+            in their titles.
+            <P>
+            Change this to:<BR>
+            <I>Title</I> = <FONT COLOR="GREEN">%Visual Basic%</FONT>
+            to return information on books with the words "Visual
+            Basic" in their titles.
+            <P>
+            </TD>
+        </TR>
+    <%EndIf%>
+<%enddetail%>
+
+</TABLE>
+</CENTER>
+</BODY>
+</HTML> 
