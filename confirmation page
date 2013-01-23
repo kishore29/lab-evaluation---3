@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE>Thank You</TITLE>
+</HEAD>
+<BODY BGCOLOR="WHITE">
+<CENTER>
+
+<IMG SRC="/project3/thanks.gif" ALT="Thank you for your purchase"
+WIDTH=450 HEIGHT=100><P>
+<BR> 
+<%If idc.txtTitle CONTAINS "database"%>
+        <FONT FACE="ARIAL" SIZE=3>
+        Check out these other hot titles on
+        database development!<P>
+        <A HREF="/scripts/project3/title.idc?txtTitle=
+Applying+SQL+in+Business">
+        Applying SQL in Business
+        </A><P>
+        <A HREF="/scripts/project3/title.idc?txtTitle=
+Paradox+made+easy">
+        Paradox made easy
+        </A><P>
+        <A HREF="/scripts/project3/title.idc?txtTitle=
+Oracle7;+the+complete+reference">
+        Oracle7; the complete reference
+        </A><P>
+        </FONT>
+    <%EndIf%> 
+<%If idc.txtTitle CONTAINS "visual"%>
+        <FONT FACE="ARIAL" SIZE=3>
+        For more information on visual tools, <BR>
+        check out the <A HREF="http://www.microsoft.com">
+        Microsoft</A> web site!
+        </FONT><P>
+    <%EndIf%> 
+<%If idc.txtTitle CONTAINS "programming"%>
+
+        <OBJECT
+        CLASSID="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF"
+        WIDTH=320
+        HEIGHT=240
+        >
+        <PARAM NAME="File" VALUE="/project3/bootcamp.ppz">
+        <EMBED
+        WIDTH=320 HEIGHT=240 SRC="/project3/bootcamp.ppz"
+        >
+        </EMBED>
+        <NOEMBED>This page contains a Microsoft PowerPoint
+        animation that your browser was unable to view.
+        </NOEMBED>
+        </OBJECT><P>
+    <%EndIf%> 
+<%If idc.txtTitle CONTAINS "script"%>
+        <FONT FACE="ARIAL" SIZE=3>
+        For more information on VBScript,<BR>
+        check out the <A HREF="http://www.vb-bootcamp.com">
+        New Technology Solutions, Inc.,</A> web site!
+        </FONT><P>
+    <%EndIf%>
+
+</CENTER>
+</BODY>
+</HTML> 
