@@ -1,0 +1,10 @@
+DataSource:Bookstore
+Template:c:\inetsrv\scripts\project3\selected.htx
+MaxRecords:21
+SQLStatement:
++SELECT Titles.Title,Titles.Description,
++Titles.Price,Authors.Author,Titles.Special
++FROM Titles,Authors,[Title Author]
++WHERE Titles.Subject LIKE '%txtSubject%'
++AND Titles.ISBN=[Title Author].ISBN
++AND [Title Author].Au_ID=Authors.Au_ID
