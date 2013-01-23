@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+<TITLE>Book Order</TITLE>
+<BASEFONT FACE="ARIAL" SIZE=3>
+
+</HEAD> 
+<BODY BGCOLOR="WHITE" OnLoad="Page_Initialize">
+<CENTER>
+
+<IMG SRC="/project3/order.gif" ALT="Book Order"
+WIDTH=360 HEIGHT=96><P>
+
+<%begindetail%>
+
+<%If Special EQ "1"%>
+    <IMG SRC="/project3/special.gif" ALT="Special"
+    HEIGHT=25 WIDTH=75>
+    <IMG SRC="/project3/special.gif" ALT="Special"
+    HEIGHT=25 WIDTH=75>
+    <IMG SRC="/project3/special.gif" ALT="Special"
+    HEIGHT=25 WIDTH=75>
+<%EndIf%>
+
+<P>
+<%Title%>
+<P>
+<%Description%>
+<P>
+<FONT SIZE=­1>
+<%Comments%>
+<P>
+<HR>
+<P> 
+<FORM ACTION="/scripts/project3/purchase.idc"
+METHOD="POST" NAME="frmPurchase">
+
+<TABLE BGCOLOR="GRAY">
+    <TR>
+        <TD COLSPAN=6>
+        <FONT FACE="ARIAL" SIZE=4>
+        <MARQUEE>
+        Place your order here!
+        </MARQUEE>
+        </FONT>
+    </TR>
+    <TR>
+        <TH ALIGN="LEFT">
+        Name
+        </TH>
+        <TD COLSPAN=5>
+        <INPUT TYPE="TEXT" NAME="txtName" SIZE=70>
+        </TD>
+    </TR>
+    <TR>
+        <TH ALIGN="LEFT">
+        Company
+        </TH>
+        <TD COLSPAN=5>
+        <INPUT TYPE="TEXT" NAME="txtCompany" SIZE=70>
+        </TD>
+    </TR>
+    <TR>
+        <TH ALIGN="LEFT">
+        Address
+        </TH>
+        <TD COLSPAN=5>
+        <INPUT TYPE="TEXT" NAME="txtAddress" SIZE=70>
+        </TD>
+    </TR>
+    <TR>
+        <TH ALIGN="LEFT">
+        City
+        </TH>
+        <TD>
+        <INPUT TYPE="TEXT" NAME="txtCity" SIZE=20>
+        </TD> 
+        <TH ALIGN="LEFT">
+        State
+        </TH>
+        <TD>
+        <INPUT TYPE="TEXT" NAME="txtState" SIZE=2 MAXLENGTH=2>
+        </TD>
+        <TH ALIGN="LEFT">
+        Zip
+        </TH>
+        <TD>
+        <INPUT TYPE="TEXT" NAME="txtZip" SIZE=5 MAXLENGTH=5>
+        </TD>
+    </TR>
+    <TR>
+        <TH COLSPAN=2 ALIGN="LEFT">
+        Credit Card
+        </TH>
+        <TD COLSPAN=2>
+        <INPUT TYPE="RADIO" NAME="optCardType"
+        VALUE="V isa" CHECKED>VISA
+        </TD>
+        <TD COLSPAN=2>
+        <INPUT TYPE="RADIO" NAME="optCardType"
+        VALUE="MC">MC
+        </TD>
+    </TR>
+    <TR>
+        <TH ALIGN="LEFT">
+        Card #
+        </TH>
+        <TD COLSPAN=5>
+        <INPUT TYPE="TEXT" NAME="txtCardNumber" SIZE=70>
+        </TD>
+    </TR>
+    <TR>
+        <TH ALIGN="LEFT">
+        Email
+        </TH>
+        <TD COLSPAN=5>
+        <INPUT TYPE="TEXT" NAME="txtEmail" SIZE=70>
+        </TD>
+    </TR>
+    <TR>
+        <TH ALIGN="LEFT">
+        Exp Date
+        </TH> 
+
+        <TD COLSPAN=5>
+        <OBJECT
+        CLASSID="clsid:8E27C92B-1264-101C-8A2F-040224009C02"
+        ID="calPurchase"
+        WIDTH=372
+        HEIGHT=200
+        >
+        <PARAM NAME="BackColor" VALUE="12632256">
+        </OBJECT><BR>
+        <INPUT TYPE="TEXT" NAME="txtExpDate" VALUE="">
+    </TR>
+    <TR>
+        <TD>
+        <INPUT TYPE="HIDDEN" VALUE="<%Title%>" NAME="txtTitle">
+        </TD>
+        <TD>
+        <INPUT TYPE="BUTTON" VALUE="Order!"NAME="btnOrder">
+        </TD>
+        <TD>
+        <INPUT TYPE="RESET">
+        </TD>
+    </TR>    
+</TABLE>
+</FORM>
+
+<%enddetail%>
+
+</CENTER>
+</BODY>
+</HTML> 
